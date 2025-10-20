@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open:reporter": "xdg-open cypress/reports/mochawesome/index.html"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
     "cypress": "^13.7.3",
+    "cypress-mochawesome-reporter": "^4.0.2",
     "cypress-xpath": "^2.0.1"
   }
 }
