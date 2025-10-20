@@ -27,8 +27,8 @@ jobs:
         if: ${{ !cancelled()}}
         with:
           name: relatorios
-          path:
-            cypress/reports
+          path: |
+            cypress/reports/mochawesome
             cypress/screenshots
             cypress/videos
 
