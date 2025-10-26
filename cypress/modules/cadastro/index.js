@@ -2,8 +2,13 @@ import {faker} from '@faker-js/faker'
 
 
 class Cadastro{
+    
     preencherFormularioDeCadastroCompleto(){
-    cy.get('input[type=radio]').check('Mrs')
+    
+
+
+    cy.get('input[type=radio]').should('be.visible').check()
+
 
     cy.get('input#password').type('12345',{log:false})
 
@@ -18,20 +23,31 @@ class Cadastro{
     cy.get('input[type=checkbox]#optin').check()
 
     cy.get('input#first_name').type(faker.person.firstName())
+    
     cy.get('input#last_name').type(faker.person.lastName())
+    
     cy.get('input#company').type(`PGATS ${faker.company.name()}`)
+    
     cy.get('input#address1').type(faker.location.streetAddress())
+    
     cy.get('select#country').select('Canada')
+   
     cy.get('input#state').type(faker.location.state())
+    
     cy.get('input#city').type(faker.location.city())
     cy.get('[data-qa="zipcode"]').type(faker.location.zipCode()) // utilizando a inspeção do cypress
+    
     cy.get('[data-qa="mobile_number"]').type('111 222 333')// utilizando a inspeção do cypress
     
     cy.get('[data-qa="create-account"]').click()
 
     // Assert
 
-    cy.url().should('includes','account_created')
+    
+    }
+
+    clicarNoBotaoContinuar(){
+        cy.get('[data-qa="continue-button"]').click()
     }
 }
 

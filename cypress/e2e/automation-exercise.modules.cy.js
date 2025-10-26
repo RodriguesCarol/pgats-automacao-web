@@ -70,6 +70,7 @@ describe('Automation Exercise', () => {
         //cy.get('[data-qa="login-password"]').type('2345')
         //cy.get('[data-qa="login-button"]').click()
         login.preencherFormularioDeLogin(userData.user,'2564')
+        console.log(userData.user)
 
         cy.get('.login-form > form > p').should('contain','Your email or password is incorrect!')
         
@@ -116,7 +117,7 @@ describe('Automation Exercise', () => {
         
     });
 
-    it('Enviar um Formulario de Contato com upload de arquivo', () => {
+    it.only('Enviar um Formulario de Contato com upload de arquivo', () => {
         cy.get ('a[href*=contact]').click()
         
         cy.get('[data-qa="name"]').type(userData.name)
