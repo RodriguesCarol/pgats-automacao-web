@@ -1,17 +1,17 @@
 class Carrinho {
-    clicarNoBotaoProsseguir(){
+    clicarNoBotaoProsseguir() {
         cy.get('.btn.btn-default.check_out').click()
     }
 
-    inserirComentarioPedido(){
+    inserirComentarioPedido() {
         cy.get('.form-control').type('Fazer pedido')
     }
 
-    clicarNoBotaoFazerPedido(){
-        cy.get('a[href="/payment"]').should('contain','Place Order').click()
+    clicarNoBotaoFazerPedido() {
+        cy.get('a[href="/payment"]').should('contain', 'Place Order').click()
     }
 
-    
+
 }
 
-export default new Carrinho ()
+export default new Carrinho()

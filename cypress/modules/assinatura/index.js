@@ -1,12 +1,12 @@
 
 import userData from '../../fixtures/example.json'
 
-class Assinatura{
-    rolarFimDaPaginaInicial(){
+class Assinatura {
+    rolarFimDaPaginaInicial() {
         cy.scrollTo('bottom')
     }
-    
-    inserirEmailEEnviar(){
+
+    inserirEmailEEnviar() {
         cy.get('#susbscribe_email').type(userData.email)
         cy.get('button#subscribe').click()
 

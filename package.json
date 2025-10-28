@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "open:reporter": "xdg-open cypress/reports/mochawesome/index.html"
+    "open:reporter": "xdg-open cypress/reports/mochawesome/index.html",
+    "test-trabalho-final": "cypress run --spec \"cypress/e2e/automacao-web-trabalho-final.cy.js\""
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
-    "cypress": "^13.7.3",
+    "cypress": "^13.17.0",
     "cypress-mochawesome-reporter": "^4.0.2",
     "cypress-xpath": "^2.0.1"
   }

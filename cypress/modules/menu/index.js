@@ -1,13 +1,13 @@
-class Menu{
-    navegarParaLogin(){
-        cy.get ('a[href="/login"]').click()
+class Menu {
+    navegarParaLogin() {
+        cy.get('a[href="/login"]').click()
     }
 
-    efetuarLogout(){
+    efetuarLogout() {
         cy.get('i.fa-user').parent().should('contain', 'QA tester')
     }
 
-    navegarParaCarrinho(){
+    navegarParaCarrinho() {
         cy.get('u').click()
 
     }
